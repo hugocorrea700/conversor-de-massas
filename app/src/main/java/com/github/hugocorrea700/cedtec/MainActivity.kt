@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.github.hugocorrea700.cedtec.databinding.ActivityMainBinding
 import java.lang.Math.ceil
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,5 +32,9 @@ class MainActivity : AppCompatActivity() {
         if  (roundUp) {
             tip = ceil(tip)
         }
+        NumberFormat.getCurrencyInstance()
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        binding.tipResult.text = getString(R.string.valor_gorjeta, formattedTip)
+
     }
 }
