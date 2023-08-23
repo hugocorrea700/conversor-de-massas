@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:inputType="numberDecimal"
-        android:hint="@string/custo_de_servico"/>
+        android:hint="@string/valor_da_massa"/>
 
     <TextView
         android:id="@+id/service_question"
@@ -30,49 +30,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:checkedButton="@+id/option_twenty_percent"
+        android:checkedButton="@+id/kg_to_lbs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/service_question">
         <RadioButton
-            android:id="@+id/option_twenty_percent"
+            android:id="@+id/kg_to_lbs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/excelente_service" />
+            android:text="@string/kg_to_lbs" />
         <RadioButton
-            android:id="@+id/option_eighteen_percent"
+            android:id="@+id/lbs_to_kg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bom_service" />
-        <RadioButton
-            android:id="@+id/option_fifteen_percent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok_service" />
+            android:text="@string/lbs_to_kg" />
     </RadioGroup>
-    <Switch
-        android:id="@+id/round_up_switch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="@string/pergunta_arredondar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/tip_options"
-        app:layout_constraintTop_toBottomOf="@id/tip_options" />
+
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/botao_calcular"
-        app:layout_constraintTop_toBottomOf="@id/round_up_switch"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        tools:layout_editor_absoluteY="192dp" />
+
     <TextView
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        android:text="@string/total_gorjeta" />
+        android:text="@string/total_convertido" />
 
 
 

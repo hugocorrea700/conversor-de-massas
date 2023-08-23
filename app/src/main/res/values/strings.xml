@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">cedtectiptime</string>
 
-    <string name="custo_de_servico">Custo do Serviço</string>
-    <string name="pergunta_servico">Como foi o serviço?</string>
+    <string name="valor_da_massa">Massa (lbs/kg)</string>
+    <string name="pergunta_servico">Quer converter para:</string>
     <string name="pergunta_arredondar">Arredondar gorjeta?</string>
     <string name="botao_calcular">Calcular</string>
-    <string name="total_gorjeta">Total:</string>
-    <string name="excelente_service">Excelente (20%)</string>
-    <string name="bom_service">Bom (18%)</string>
-    <string name="ok_service">Ok (15%)</string>
-    <string name="valor_gorjeta">Gorjeta: %s</string>
+    <string name="total_convertido">Resultado:</string>
+    <string name="kg_to_lbs">Kg -> Lbs</string>
+    <string name="lbs_to_kg">Lbs -> Kg</string>
+    <string name="resultado_massa">Massa: %s</string>
 </resources>

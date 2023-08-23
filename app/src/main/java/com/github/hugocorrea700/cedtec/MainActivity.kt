@@ -19,22 +19,17 @@ class MainActivity : AppCompatActivity() {
     fun calculateTip() {
 
         val stringInTextField = binding.costOfService.text.toString()
-        val cost = stringInTextField.toDouble()
+        val massa = stringInTextField.toDouble()
         val selectedId = binding.tipOptions.checkedRadioButtonId
-        val tipPercentage = when (selectedId) {
-            R.id.option_twenty_percent -> 0.2
-            R.id.option_eighteen_percent -> 0.18
-            else -> 0.15
+        val multiplicadorManeira = when (selectedId) {
+            R.id.kg_to_lbs -> 2.2
+            else -> 0.45
         }
-        var tip = tipPercentage * cost
-        val roundUp = binding.roundUpSwitch.isChecked
+        var massaNova = multiplicadorManeira * massa
 
-        if  (roundUp) {
-            tip = ceil(tip)
-        }
         NumberFormat.getCurrencyInstance()
-        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.tipResult.text = getString(R.string.valor_gorjeta, formattedTip)
+        val massaConvertida = NumberFormat.getCurrencyInstance().format(massaNova)
+        binding.tipResult.text = getString(R.string.resultado_massa, massaConvertida)
 
     }
 }
